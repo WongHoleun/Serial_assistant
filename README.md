@@ -2,13 +2,13 @@
 基于 QT5 编写的上位机，最大支持同时绘制 4 条波形
 
 ## 数据显示格式案例：
-> HR=70.80 
-> SpO2=99.64 
-> MH=9.35
-> SBP=125.04 
-> DBP=71.89
-> BF=3.5 
-> end
+> HR=70.80  
+> SpO2=99.64   
+> MH=9.35  
+> SBP=125.04   
+> DBP=71.89  
+> BF=3.5  
+> end  
 
 ## 波形绘制通信协议案例：
 - =======================QT.h============================
@@ -23,14 +23,14 @@ void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len);
 
 - =======================QT.c============================
 include "QT.h"
-// cpu为小端模式存储，也就是在存储的时候，低位被存在0字节，高位在1字节
+
+// cpu为小端模式存储，也就是在存储的时候，低位被存在0字节，高位在1字节  
 #define BYTE0(dwTemp) (*(char *)(&dwTemp))		 // 取出int型变量的低字节
 #define BYTE1(dwTemp) (*((char *)(&dwTemp) + 1)) //	取存储在此变量下一内存字节的内容，高字节
 #define BYTE2(dwTemp) (*((char *)(&dwTemp) + 2))
 #define BYTE3(dwTemp) (*((char *)(&dwTemp) + 3))
 
-// 传输波形数据到 QT 上位机
-void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len)
+void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len) // 传输波形数据到 QT 上位机
 {
 	int i;
 	uint8_t sumcheck = 0;
