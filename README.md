@@ -12,7 +12,7 @@
 
 ## 波形绘制通信协议案例：
 - QT.h
-
+  ```
 #ifndef __QT_H
 #define __QT_H
 
@@ -21,8 +21,10 @@
 void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len);
 
 #endif
+```
 
 - QT.c
+```
 include "QT.h"
 
 // cpu为小端模式存储，也就是在存储的时候，低位被存在0字节，高位在1字节    
@@ -63,3 +65,5 @@ void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len) // 传输波形数�
     HAL_UART_Transmit_DMA(&huart1, Buff, _cnt);   // DMA 方式发送数据
     HAL_Delay(20);
 }
+```
+
