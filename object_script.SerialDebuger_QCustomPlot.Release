@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/mycombobox.o
+release/plot.o
+release/qcustomplot.o
+release/qrc_res.o
+release/moc_mainwindow.o
+release/moc_mycombobox.o
+release/moc_plot.o
+release/moc_qcustomplot.o

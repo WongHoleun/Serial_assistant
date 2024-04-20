@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/mycombobox.o
+debug/plot.o
+debug/qcustomplot.o
+debug/qrc_res.o
+debug/moc_mainwindow.o
+debug/moc_mycombobox.o
+debug/moc_plot.o
+debug/moc_qcustomplot.o
