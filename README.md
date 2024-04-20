@@ -11,7 +11,7 @@
 > end  
 
 ## 波形绘制通信协议案例：
-- =======================QT.h============================
+- QT.h  
 #ifndef __QT_H
 #define __QT_H
 
@@ -21,17 +21,17 @@ void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len);
 
 #endif
 
-- =======================QT.c============================
+- QT.c  
 include "QT.h"
 
-// cpu为小端模式存储，也就是在存储的时候，低位被存在0字节，高位在1字节  
-#define BYTE0(dwTemp) (*(char *)(&dwTemp))		 // 取出int型变量的低字节
-#define BYTE1(dwTemp) (*((char *)(&dwTemp) + 1)) //	取存储在此变量下一内存字节的内容，高字节
+// cpu为小端模式存储，也就是在存储的时候，低位被存在0字节，高位在1字节    
+#define BYTE0(dwTemp) (*(char *)(&dwTemp))		 // 取出int型变量的低字节  
+#define BYTE1(dwTemp) (*((char *)(&dwTemp) + 1)) 	// 取存储在此变量下一内存字节的内容，高字节  
 #define BYTE2(dwTemp) (*((char *)(&dwTemp) + 2))
 #define BYTE3(dwTemp) (*((char *)(&dwTemp) + 3))
 
-void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len) // 传输波形数据到 QT 上位机
-{
+void Sent_Data_DMA_Qt(float data1, float data2, uint8_t len) // 传输波形数据到 QT 上位机    
+{  
 	int i;
 	uint8_t sumcheck = 0;
 	uint8_t _cnt = 0;
