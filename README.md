@@ -12,7 +12,7 @@
 
 ## 波形绘制通信协议案例：
 - QT.h
-  ```
+```
 #ifndef __QT_H
 #define __QT_H
 
